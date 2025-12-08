@@ -4,97 +4,230 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poster 2 – Das furchtbare Erbe einer Trunkenen</title>
+
   <style>
+    /* ====== THEME COLORS ====== */
     :root {
       --bg-color: #f4f4f4;
       --text-color: #222;
       --card-bg: #ffffff;
-      --accent: #c62828;
-      --header-bg: #111111;
-      --nav-bg: #222222;
-      --nav-link-bg: #444444;
-      --nav-link-hover: #666666;
+      --accent: #781414;
+      --header-bg: #202020;
+      --nav-bg: #303030;
+      --nav-link-bg: #424242;
+      --nav-link-hover: #555;
     }
+
     [data-theme="dark"] {
-      --bg-color: #050509;
-      --text-color: #f1f1f1;
-      --card-bg: #15151b;
-      --accent: #e53935;
+      --bg-color: #0c0c12;
+      --text-color: #e8e8e8;
+      --card-bg: #1a1a22;
+      --accent: #b23434;
       --header-bg: #000000;
-      --nav-bg: #101018;
-      --nav-link-bg: #262636;
-      --nav-link-hover: #3b3b57;
+      --nav-bg: #12121a;
+      --nav-link-bg: #2c2c3d;
+      --nav-link-hover: #3f3f56;
     }
-    body { margin: 0; font-family: 'Inter', Arial, sans-serif; background: var(--bg-color); color: var(--text-color); transition: background 0.4s ease, color 0.4s ease; }
-    nav { background: var(--nav-bg); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; }
-    nav a, nav button { color: #fff; text-decoration: none; padding: 8px 14px; background: var(--nav-link-bg); border-radius: 999px; border: none; cursor: pointer; font-size: 0.9rem; }
-    nav a:hover, nav button:hover { background: var(--nav-link-hover); }
-    .container { max-width: 900px; margin: 30px auto; background: var(--card-bg); padding: 32px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-    .poster-img { max-width: 100%; border-radius: 12px; cursor: pointer; display: block; margin: 16px 0 24px; transition: transform 0.3s ease; }
-    .poster-img:hover { transform: scale(1.02); }
-    h2 { margin-top: 0; }
-    .section-title { margin-top: 22px; border-bottom: 2px solid rgba(0,0,0,0.08); padding-bottom: 6px; }
-    #lightbox2 { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; z-index: 999; }
-    #lightbox2 img { max-width: 90%; max-height: 90%; border-radius: 10px; }
+
+    /* ====== GLOBAL ====== */
+    body {
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.7;
+      transition: background .3s ease, color .3s ease;
+    }
+
+    * { box-sizing: border-box; }
+
+    /* ====== NAVIGATION ====== */
+    nav {
+      background: var(--nav-bg);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    }
+
+    nav a, nav button {
+      background: var(--nav-link-bg);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: "Times New Roman", serif;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    nav a:hover, nav button:hover {
+      background: var(--nav-link-hover);
+      transform: translateY(-1px);
+    }
+
+    /* ====== MAIN CARD ====== */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+      animation: fadeInUp .7s ease both;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+      padding-bottom: 6px;
+      margin-bottom: 22px;
+    }
+
+    h3.section-title {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+      padding-bottom: 6px;
+    }
+
+    /* ====== POSTER IMAGE ====== */
+    .poster-img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 22px 0 32px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+      cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .poster-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    /* ====== LIGHTBOX ====== */
+    #lightbox2 {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    #lightbox2 img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
+
 <body>
+
 <nav>
   <a href="index.html">← Back to Home</a>
-  <button id="theme-toggle-p2" type="button">🌙 Dark mode</button>
+  <button id="theme-toggle">🌙 Dark mode</button>
 </nav>
+
 <div class="container">
   <h2>“Das furchtbare Erbe einer Trunkenen”</h2>
-  <p>This eugenics poster, whose title can be translated as <strong>“The Horrible Legacy of a Drunkard (Female)”</strong>, was created in 1936 as part of Nazi Germany’s campaign for so‑called racial hygiene. Produced under the authority of the Reich Ministry of Public Enlightenment and Propaganda and the Office of Racial Policy, it uses images of a mother and her children to suggest that alcoholism inevitably produces unhealthy and “inferior” descendants.</p>
 
-  <img src="poster2.jpg" alt="Nazi eugenics poster warning about the hereditary danger of alcoholism" class="poster-img" id="poster2-img" />
+  <p>
+    This eugenics poster, translated as <strong>“The Horrible Legacy of a Drunkard (Female)”</strong>, 
+    was created in 1936 during Nazi Germany’s aggressive push for racial hygiene. Produced by the Propaganda Ministry 
+    and the Office of Racial Policy, the poster uses imagery of a mother and her children to imply that alcoholism 
+    causes hereditary degeneration.
+  </p>
+
+  <img src="trunkenen.jpg"
+       alt="Das furchtbare Erbe einer Trunkenen propaganda poster"
+       class="poster-img"
+       id="poster2-img" />
+
+  <p>
+    By pairing moral judgment with pseudoscientific claims, the design encouraged ordinary Germans to see heredity 
+    as a public responsibility. The poster framed alcoholism as a biological threat—not just to a family, but to the 
+    nation as a whole.
+  </p>
 
   <h3 class="section-title">Creation, Audience, and Distribution</h3>
-  <p>According to the United States Holocaust Memorial Museum’s exhibition <em>State of Deception: The Power of Nazi Propaganda</em>, this poster appeared in public health displays, classrooms, and medical offices (“Medical and Racial Propaganda”). It was aimed at ordinary Germans, not just specialists, and used familiar family imagery to communicate complex ideas about heredity. By showing multiple generations supposedly harmed by one woman’s drinking, the design encouraged viewers to think about biology and morality as public issues rather than private struggles.</p>
-  <p>Surviving copies of the poster have been preserved in museum collections and photographed for educational exhibits. The fact that it appears in these archives today reminds us how visually persuasive propaganda could be: even without reading the text, a viewer immediately sees a “before and after” story that blames individual behavior for long‑term genetic decline.</p>
+  <p>
+    The United States Holocaust Memorial Museum’s exhibition 
+    <em>State of Deception: The Power of Nazi Propaganda</em> describes how this poster appeared in health offices, 
+    schools, and public exhibits (“Medical and Racial Propaganda”). It did not target doctors but everyday citizens, 
+    leading them to imagine heredity visually, through staged images that suggested generational decline.
+  </p>
+  <p>
+    Copies of this poster survive in museum archives today because it was widely distributed and later confiscated 
+    after the fall of the Nazi regime. Its preservation allows historians to analyze how visual storytelling supported 
+    discriminatory state policy.
+  </p>
 
   <h3 class="section-title">Meaning and Symbolism</h3>
-  <p>The poster’s central claim is that alcoholism is not only a personal failing, but a hereditary threat to the nation. The children are drawn with physical deformities or unhappy expressions, suggesting that they will become burdens on German society. This visual message supports the idea that people labeled as “asocial,” disabled, or addicted should be prevented from having children. In this way, the poster turns medical prejudice into a seemingly scientific argument for sterilization.</p>
-  <p>The technique matches broader Nazi rhetoric about “hereditarily diseased offspring” used to justify the 1933 sterilization law. By presenting graphs, medical diagrams, and images like this, propagandists blurred the line between science and ideology. As the USHMM notes, these materials were designed to make radical policies appear not cruel, but responsible and even necessary for the health of the “national body.”</p>
+  <p>
+    The poster’s message is that alcoholism becomes hereditary disability. Children are depicted with deformities or 
+    sadness, implying that they will burden society. This transforms prejudice into supposed scientific evidence 
+    supporting forced sterilization.
+  </p>
+  <p>
+    Such imagery complemented official rhetoric surrounding the 1933 Law for the Prevention of Hereditarily Diseased 
+    Offspring, which allowed the state to sterilize people deemed “unfit.” By presenting moralized medical imagery, 
+    posters like this made extreme policies appear reasonable and necessary.
+  </p>
 
   <h3 class="section-title">Historical Significance</h3>
-  <p>This poster is historically important because it illustrates how propaganda prepared the public to accept invasive state policies. Instead of debating sterilization in abstract legal terms, the regime showed alarming images of “degeneration” and appealed to parents’ fears about their children’s future. Once people accepted the idea that certain lives were “worth less,” it became easier for the state to expand from sterilization to the so‑called “euthanasia” program and, eventually, to mass murder.</p>
+  <p>
+    This poster illustrates how propaganda normalized eugenics by appealing to fear and parental anxieties. 
+    Once the public accepted the idea that certain lives were “burdens,” it became easier for the regime to expand 
+    from sterilization to euthanasia programs and eventually to genocide.
+  </p>
 
   <h3 class="section-title">Cited</h3>
   <p>United States Holocaust Memorial Museum, “Medical and Racial Propaganda,” <em>State of Deception: The Power of Nazi Propaganda</em>.</p>
 </div>
 
+<!-- LIGHTBOX -->
 <div id="lightbox2">
-  <img src="poster2.jpg" alt="Enlarged view of the eugenics poster about alcoholism" />
+  <img src="trunkenen.jpg" alt="Full view of the eugenics propaganda poster">
 </div>
 
 <script>
-  const root2 = document.documentElement;
-  const toggle2 = document.getElementById('theme-toggle-p2');
-  const saved2 = localStorage.getItem('theme');
-  if (saved2) {
-    root2.setAttribute('data-theme', saved2);
-    if (saved2 === 'dark' && toggle2) toggle2.textContent = '☀️ Light mode';
-  }
-  if (toggle2) {
-    toggle2.addEventListener('click', () => {
-      const now = root2.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root2.setAttribute('data-theme', now);
-      localStorage.setItem('theme', now);
-      toggle2.textContent = now === 'dark' ? '☀️ Light mode' : '🌙 Dark mode';
-    });
+  /* Theme Toggle */
+  const toggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    html.setAttribute("data-theme", savedTheme);
+    toggle.textContent = savedTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   }
 
-  const img2 = document.getElementById('poster2-img');
-  const lightbox2 = document.getElementById('lightbox2');
-  if (img2 && lightbox2) {
-    img2.addEventListener('click', () => {
-      lightbox2.style.display = 'flex';
-    });
-    lightbox2.addEventListener('click', () => {
-      lightbox2.style.display = 'none';
-    });
-  }
+  toggle.addEventListener("click", () => {
+    const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+    toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  });
+
+  /* Lightbox */
+  const img2 = document.getElementById("poster2-img");
+  const box2 = document.getElementById("lightbox2");
+
+  img2.addEventListener("click", () => box2.style.display = "flex");
+  box2.addEventListener("click", () => box2.style.display = "none");
 </script>
+
 </body>
 </html>
