@@ -3,63 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sources and Bibliography</title>
+  <title>Sources & Bibliography</title>
 
   <style>
     /* ====== THEME COLORS ====== */
     :root {
-      --bg-color: #f4f4f4;
+      --bg-color: rgba(255,255,255,0.82);
       --text-color: #222;
-      --card-bg: #ffffff;
-      --accent: #781414;
-      --nav-bg: #303030;
-      --nav-link-bg: #424242;
-      --nav-link-hover: #555;
+      --card-bg: rgba(255,255,255,0.9);
+      --accent: #7a0f0f;
+      --nav-bg: rgba(0,0,0,0.65);
+      --nav-link-bg: rgba(80,80,80,0.7);
+      --nav-link-hover: rgba(120,120,120,0.8);
     }
 
     [data-theme="dark"] {
-      --bg-color: #0c0c12;
+      --bg-color: rgba(20,20,30,0.75);
       --text-color: #e8e8e8;
-      --card-bg: #1a1a22;
-      --accent: #b23434;
-      --nav-bg: #12121a;
-      --nav-link-bg: #2c2c3d;
-      --nav-link-hover: #3f3f56;
+      --card-bg: rgba(30,30,40,0.8);
+      --accent: #c94141;
+      --nav-bg: rgba(0,0,0,0.75);
+      --nav-link-bg: rgba(50,50,70,0.7);
+      --nav-link-hover: rgba(80,80,110,0.8);
     }
 
-    /* ====== GLOBAL ====== */
+    /* ====== BACKGROUND IMAGE ====== */
     body {
       margin: 0;
-      background: var(--bg-color);
-      color: var(--text-color);
       font-family: "Times New Roman", serif;
-      font-size: 18px;
-      line-height: 1.7;
-      transition: background .3s ease, color .3s ease;
+      background-image: url("German.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: var(--text-color);
+      font-size: 19px;
+      line-height: 1.75;
     }
 
-    * { box-sizing: border-box; }
-
-    /* ====== NAV ====== */
+    /* ====== NAVIGATION ====== */
     nav {
       background: var(--nav-bg);
-      padding: 12px 16px;
+      padding: 14px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      justify-content: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(4px);
     }
 
     nav a, nav button {
-      background: var(--nav-link-bg);
       color: #fff;
+      background: var(--nav-link-bg);
       padding: 8px 16px;
+      text-decoration: none;
       border-radius: 999px;
       border: none;
-      text-decoration: none;
       cursor: pointer;
-      font-size: 16px;
-      font-family: "Times New Roman", serif;
+      font-size: 17px;
       transition: background .2s ease, transform .2s ease;
     }
 
@@ -68,116 +70,103 @@
       transform: translateY(-1px);
     }
 
-    /* ====== MAIN CARD ====== */
+    /* ====== MAIN CONTENT CARD ====== */
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       background: var(--card-bg);
       padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.15);
-      animation: fadeInUp .7s ease both;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+      backdrop-filter: blur(5px);
     }
 
     h2 {
-      font-size: 1.7rem;
+      text-align: center;
+      font-size: 1.9rem;
+      margin-bottom: 24px;
       border-bottom: 2px solid rgba(0,0,0,0.15);
-      padding-bottom: 6px;
-      margin-bottom: 22px;
+      padding-bottom: 10px;
     }
 
     h3 {
-      font-size: 1.3rem;
-      margin-top: 28px;
-      border-bottom: 2px solid rgba(0,0,0,0.12);
+      font-size: 1.4rem;
+      margin-top: 30px;
+      border-bottom: 2px solid rgba(0,0,0,0.15);
       padding-bottom: 6px;
     }
 
     p {
-      margin-top: 14px;
       margin-bottom: 14px;
-      text-align: justify;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
+
 
 <body>
 
 <nav>
-  <a href="index.html">← Back to Home</a>
+  <a href="index.html">Home</a>
+  <a href="poster1.html">Poster 1</a>
+  <a href="poster2.html">Poster 2</a>
+  <a href="poster3.html">Poster 3</a>
+  <a href="sources.html">Sources</a>
   <button id="theme-toggle">🌙 Dark mode</button>
 </nav>
 
 <div class="container">
-  <h2>Source Analysis</h2>
+  <h2>Sources & Bibliography</h2>
 
   <h3>Primary Sources</h3>
 
   <p>
-    <strong>Reichstag Speech (1939).</strong> Delivered by Adolf Hitler on January 30, 1939, this speech publicly 
-    threatened the Jewish population of Europe. As documented by the United States Holocaust Memorial Museum, 
-    the speech reached millions through radio broadcasts and print media. It provides essential context for understanding 
-    how verbal threats reinforced the messages in Nazi visual propaganda, helping normalize discrimination and prepare 
-    the population for radical policies (“Reichstag Speech”).
+    <strong>United States Holocaust Memorial Museum.</strong>  
+    “Reichstag Speech.” <em>Holocaust Encyclopedia.</em>  
+    Accessed October 11, 2025.
   </p>
 
   <p>
-    <strong>Medical and Racial Propaganda Posters.</strong> The posters 
-    <em>“Das furchtbare Erbe einer Trunkenen”</em> and <em>“Sterilisation ist Befreiung, nicht Strafe”</em> are 
-    primary visual sources reproduced in the USHMM exhibition <em>State of Deception: The Power of Nazi Propaganda</em>. 
-    They demonstrate how pseudoscientific ideas about heredity were simplified and emotionalized for general audiences. 
-    These posters helped normalize discriminatory policies by presenting them as medical necessity or social responsibility 
-    (“Medical and Racial Propaganda”).
+    <strong>United States Holocaust Memorial Museum.</strong>  
+    “Medical and Racial Propaganda.” <em>State of Deception: The Power of Nazi Propaganda.</em>  
+    Accessed October 11, 2025.
   </p>
 
   <p>
-    <strong>Front Page of Der Stürmer.</strong> The antisemitic newspaper <em>Der Stürmer</em> relied on sensationalism 
-    and shocking imagery to spread conspiracy myths about Jews. The USHMM’s documentation of its most widely circulated issue 
-    illustrates how repetition, caricature, and fearmongering shaped public opinion. This connects directly to poster propaganda, 
-    showing how multiple media forms worked together to reinforce hatred.
+    <strong>United States Holocaust Memorial Museum.</strong>  
+    “Front Page of the Most Popular Issue Ever of <em>Der Stürmer</em>.” <em>Holocaust Encyclopedia.</em>  
+    Accessed October 11, 2025.
   </p>
 
   <h3>Secondary Source</h3>
 
   <p>
-    <strong>PBS Biography of Joseph Goebbels.</strong> The PBS <em>American Experience</em> biography provides historical 
-    insight into Goebbels’s role as Minister for Public Enlightenment and Propaganda. It explains how he centralized media control, 
-    crafted targeted messaging strategies, and used technology to shape public consciousness. This background helps situate the 
-    posters in a coordinated propaganda system, rather than treating them as isolated artifacts.
+    <strong>PBS.</strong>  
+    “Joseph Goebbels (1897–1945).” <em>American Experience.</em>  
+    Accessed October 11, 2025.
   </p>
 
-  <h2>Chicago Style Bibliography</h2>
-
-  <p>United States Holocaust Memorial Museum. “Reichstag Speech.” <em>Holocaust Encyclopedia</em>. Accessed October 11, 2025.</p>
-
-  <p>United States Holocaust Memorial Museum. “Medical and Racial Propaganda.” <em>State of Deception: The Power of Nazi Propaganda</em>. Accessed October 11, 2025.</p>
-
-  <p>United States Holocaust Memorial Museum. “Front Page of the Most Popular Issue Ever of <em>Der Stürmer</em>.” <em>Holocaust Encyclopedia</em>. Accessed October 11, 2025.</p>
-
-  <p>PBS. “Joseph Goebbels (1897–1945).” <em>American Experience</em>. Accessed October 11, 2025.</p>
 </div>
 
 <script>
-  /* THEME TOGGLE */
+  /* THEME SWITCH */
   const toggle = document.getElementById("theme-toggle");
   const html = document.documentElement;
   const savedTheme = localStorage.getItem("theme");
 
   if (savedTheme) {
     html.setAttribute("data-theme", savedTheme);
-    toggle.textContent = savedTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+    toggle.textContent =
+      savedTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   }
 
   toggle.addEventListener("click", () => {
-    const newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    const newTheme =
+      html.getAttribute("data-theme") === "dark" ? "light" : "dark";
     html.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
-    toggle.textContent = newTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+    toggle.textContent =
+      newTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   });
 </script>
 
