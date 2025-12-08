@@ -6,28 +6,26 @@
   <title>The Hidden Language of Nazi Propaganda</title>
 
   <style>
-    /* ====== GLOBAL THEME COLORS ====== */
+    /* ====== THEME COLORS ====== */
     :root {
-      --bg-color: rgba(255,255,255,0.85);
+      --bg-color: rgba(255,255,255,0.82);
       --text-color: #222;
-      --card-bg: rgba(255,255,255,0.85);
-      --accent: #7a0f0f;
+      --card-bg: rgba(255,255,255,0.88);
       --nav-bg: rgba(0,0,0,0.65);
       --nav-link-bg: rgba(80,80,80,0.7);
       --nav-link-hover: rgba(120,120,120,0.8);
     }
 
     [data-theme="dark"] {
-      --bg-color: rgba(10,10,15,0.8);
+      --bg-color: rgba(20,20,30,0.75);
       --text-color: #e8e8e8;
-      --card-bg: rgba(20,20,30,0.75);
-      --accent: #c94141;
+      --card-bg: rgba(30,30,40,0.75);
       --nav-bg: rgba(0,0,0,0.75);
       --nav-link-bg: rgba(50,50,70,0.7);
       --nav-link-hover: rgba(80,80,110,0.8);
     }
 
-    /* ====== BACKGROUND IMAGE ====== */
+    /* ====== BACKGROUND ====== */
     body {
       margin: 0;
       font-family: "Times New Roman", serif;
@@ -37,7 +35,7 @@
       background-position: center;
       color: var(--text-color);
       font-size: 19px;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     /* ====== NAV BAR ====== */
@@ -51,7 +49,6 @@
       top: 0;
       z-index: 10;
       backdrop-filter: blur(4px);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     nav a, nav button {
@@ -63,7 +60,7 @@
       border: none;
       cursor: pointer;
       font-size: 17px;
-      transition: background .2s ease, transform .2s ease;
+      transition: background .25s ease, transform .2s ease;
     }
 
     nav a:hover, nav button:hover {
@@ -71,14 +68,14 @@
       transform: translateY(-1px);
     }
 
-    /* ====== MAIN CONTENT WRAPPER ====== */
+    /* ====== MAIN CONTENT CONTAINER ====== */
     .container {
-      max-width: 1100px;
-      margin: 40px auto;
+      max-width: 1250px;
+      margin: 50px auto;
       background: var(--card-bg);
-      padding: 42px;
-      border-radius: 16px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+      padding: 50px;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
       backdrop-filter: blur(4px);
     }
 
@@ -87,34 +84,34 @@
     }
 
     h1 {
-      font-size: 2.1rem;
-      margin-bottom: 12px;
+      font-size: 2.2rem;
+      margin-bottom: 14px;
     }
 
     h2 {
-      margin-top: 32px;
-      font-size: 1.6rem;
+      font-size: 1.7rem;
+      margin-top: 40px;
       border-bottom: 2px solid rgba(0,0,0,0.15);
-      padding-bottom: 8px;
+      padding-bottom: 10px;
     }
 
-    .intro {
-      font-size: 1.15rem;
-      line-height: 1.8;
+    ul {
+      margin-top: 12px;
     }
 
     .grid-two {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 26px;
+      gap: 32px;
       margin-top: 20px;
     }
 
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
       .grid-two { grid-template-columns: 1fr; }
     }
   </style>
 </head>
+
 
 <body>
 
@@ -123,69 +120,69 @@
   <a href="poster1.html">Poster 1</a>
   <a href="poster2.html">Poster 2</a>
   <a href="poster3.html">Poster 3</a>
+  <a href="conclusion.html">Conclusion</a>
   <a href="sources.html">Sources</a>
   <button id="theme-toggle">🌙 Dark mode</button>
 </nav>
 
 <div class="container">
   <h1>The Hidden Language of Nazi Propaganda</h1>
-  <p class="intro">
-    This project explores how the Nazi regime used posters and visual media to shape public opinion,
-    legitimize discrimination, and promote racial ideology. Propaganda was not random—it strategically blended
-    emotion, pseudoscience, nationalism, and repetition. By studying three posters, we can understand how visual
-    messaging persuaded ordinary Germans to accept, support, or ignore escalating violence.
+
+  <p>
+    This project examines how the Nazi regime used posters and mass media to reshape public thinking,
+    normalize discrimination, and promote an ideology of racial hierarchy. Propaganda was not passive—it
+    was a deliberate system of emotional and visual manipulation designed to make extremist policies appear
+    rational, necessary, and patriotic.
   </p>
 
   <h2>The Reich Ministry of Public Enlightenment and Propaganda</h2>
+
   <p>
-    Led by Joseph Goebbels, this ministry controlled newspapers, radio, art, film, literature, education, and
-    public messaging. Its goals included:
+    Under Joseph Goebbels, this ministry unified control over newspapers, radio, art, film, literature,
+    and public messaging. By deciding what Germans could see, hear, and read, the ministry created a world
+    where Nazi ideology seemed natural and widely supported.
   </p>
 
   <ul>
-    <li>Shaping how Germans understood race, health, and national identity</li>
-    <li>Promoting the idea of a unified “Aryan” community</li>
-    <li>Suppressing opposing viewpoints</li>
-    <li>Normalizing antisemitism, eugenics, and loyalty to Hitler</li>
+    <li>Amplified loyalty to Hitler</li>
+    <li>Defined “racial enemies” as threats to the national community</li>
+    <li>Used pseudoscience to justify sterilization policies</li>
+    <li>Shaped everyday thinking through repetition and controlled information</li>
   </ul>
 
   <div class="grid-two">
     <div>
       <p>
-        Through posters, newspapers, films, and speeches, the ministry saturated Germany with emotionally charged
-        ideas. Messages repeated across different media created the impression that Nazi ideology was common sense.
+        The three posters analyzed in this project each reveal a different dimension of this propaganda
+        system. They show how fear, nationalism, and fabricated science worked together to reinforce obedience
+        and justify exclusion.
       </p>
     </div>
+
     <div>
       <p>
-        The posters studied here—<em>“Ein Volk, ein Reich, ein Führer!”</em>,
-        <em>“Das furchtbare Erbe einer Trunkenen”</em>, and
-        <em>“Sterilisation ist Befreiung, nicht Strafe”</em>—represent political unity, hereditary fear, and the
-        sanitizing of medical coercion.
+        Understanding these posters helps us understand the mechanisms that made genocide possible—not just
+        violence, but persuasion, imagery, and the systematic shaping of public belief.
       </p>
     </div>
   </div>
 </div>
 
 <script>
-  /* Dark mode toggle */
   const toggle = document.getElementById("theme-toggle");
   const html = document.documentElement;
-  const savedTheme = localStorage.getItem("theme");
+  const saved = localStorage.getItem("theme");
 
-  if (savedTheme) {
-    html.setAttribute("data-theme", savedTheme);
-    toggle.textContent =
-      savedTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  if (saved) {
+    html.setAttribute("data-theme", saved);
+    toggle.textContent = saved === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   }
 
   toggle.addEventListener("click", () => {
-    const newTheme =
-      html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    html.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    toggle.textContent =
-      newTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+    const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+    toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   });
 </script>
 
