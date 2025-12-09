@@ -29,9 +29,8 @@
       font-family: "Times New Roman", serif;
       background-image: url("German.jpg");
       background-size: cover;
-      background-attachment: fixed;
       background-position: center;
-      background-color: var(--bg-color);
+      background-attachment: fixed;
       color: var(--text-color);
       font-size: 18px;
       line-height: 1.7;
@@ -46,6 +45,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
+      backdrop-filter: blur(4px);
     }
 
     nav a, nav button {
@@ -56,14 +56,13 @@
       border-radius: 999px;
       border: none;
       cursor: pointer;
+      transition: background .2s ease;
       font-size: 16px;
-      transition: background .2s ease, transform .2s ease;
     }
-
     nav a:hover, nav button:hover { background: var(--nav-link-hover); }
 
     .container {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 40px auto;
       background: var(--card-bg);
       padding: 40px;
@@ -73,21 +72,20 @@
 
     .flex {
       display: flex;
-      gap: 30px;
+      gap: 40px;
       align-items: flex-start;
     }
 
-    .left { flex: 0 0 40%; }
-    .right { flex: 0 0 60%; }
+    .left { flex: 0 0 48%; }
+    .right { flex: 0 0 52%; }
 
     .poster-img {
       width: 100%;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
       cursor: pointer;
       transition: transform .25s ease;
     }
-
     .poster-img:hover { transform: scale(1.03); }
 
     #lightbox {
@@ -100,17 +98,30 @@
       z-index: 999;
     }
 
-    #lightbox img { max-width: 90%; max-height: 90%; }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
 
-    h2 { margin-top: 0; border-bottom: 2px solid #aaa; padding-bottom: 6px; }
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #aaa;
+      padding-bottom: 6px;
+    }
 
-    h3 { margin-top: 28px; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+    h3 {
+      margin-top: 28px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
 
-    ul { margin-left: 20px; }
+    ul { margin-left: 18px; }
   </style>
 </head>
 
 <body>
+
 <nav>
   <a href="index.html">← Back to Home</a>
   <button id="theme-toggle">🌙 Dark mode</button>
@@ -120,54 +131,63 @@
   <h2>“Ein Volk, ein Reich, ein Führer!”</h2>
 
   <div class="flex">
+
+    <!-- IMAGE LEFT -->
     <div class="left">
-      <img src="einvolk.jpg" class="poster-img" id="poster-image" alt="Ein Volk, ein Reich, ein Führer poster">
+      <img src="einvolk.jpg" class="poster-img" id="poster1-img" alt="Ein Volk, ein Reich, ein Führer poster">
     </div>
 
+    <!-- TEXT RIGHT -->
     <div class="right">
+
       <h3>Background and Purpose</h3>
       <p>
-        Created during the late 1930s, this poster promoted one of Nazi Germany’s most recognizable political slogans:
-        <strong>“One People, One Empire, One Leader.”</strong> It appeared prominently during the annexation of Austria and the expansion into
-        surrounding regions. The design was part of a coordinated propaganda strategy led by the Reich Ministry of Public
-        Enlightenment and Propaganda to unite ethnic Germans under a single political and ideological identity.
+        This widely distributed propaganda poster appeared across Germany in 1938–1939, during the annexation of Austria and the
+        expansion of the Nazi state. The slogan <strong>“Ein Volk, ein Reich, ein Führer!”</strong> (“One People, One Empire, One Leader!”)
+        became a rallying cry that connected nationalism directly to obedience toward Hitler.
       </p>
 
-      <h3>How the Poster Was Used</h3>
+      <h3>How the Poster Functioned</h3>
       <ul>
-        <li>Displayed during mass rallies and political celebrations</li>
-        <li>Printed in newspapers and distributed as handbills</li>
-        <li>Placed in schools, government offices, and transportation hubs</li>
-        <li>Used to create a sense of unstoppable national momentum</li>
+        <li>Created emotional unity around a single leader</li>
+        <li>Eliminated the idea of political diversity</li>
+        <li>Linked national identity with racial identity</li>
+        <li>Promoted the belief that loyalty to Hitler was loyalty to Germany itself</li>
       </ul>
 
       <h3>Visual Message</h3>
       <p>
-        The imagery emphasized Hitler’s posture, confidence, and authority. The slogan worked as a command: unity was not
-        optional but required. The message portrayed Germany’s political future as inseparable from Hitler himself.
+        The simplicity of the poster was intentional. Instead of overwhelming viewers, the slogan and imagery worked together
+        to make dictatorship feel natural and patriotic. The design implied:
       </p>
       <ul>
-        <li>Short, rhythmic slogan easy to memorize</li>
-        <li>Leader-centered imagery reinforcing obedience</li>
-        <li>Absence of dissent or diversity—unity presented as natural law</li>
+        <li>The German people form one unified racial “body”</li>
+        <li>A single leader is needed to guide that body</li>
+        <li>Criticism of Hitler equals betrayal of the nation</li>
       </ul>
 
-      <h3>Historical Importance</h3>
+      <h3>Historical Significance</h3>
       <p>
-        Posters like this normalized authoritarian leadership by presenting dictatorship as unity rather than oppression.
-        This ideological framing helped justify racial laws, suppression of political opponents, and later expansionist
-        conflict by claiming all actions were done on behalf of a unified national will.
+        This poster helped build the emotional foundation for later policies targeting Jews, Roma, disabled Germans, and other
+        groups labeled as “outsiders.” By promoting the idea that unity required obedience, the regime erased space for dissent.
       </p>
+
+      <p>
+        This message, repeated across rallies, newspapers, and radio broadcasts, shaped a society where extreme violence could be
+        justified as necessary for the protection of the “national community.”
+      </p>
+
     </div>
   </div>
 </div>
 
+<!-- LIGHTBOX -->
 <div id="lightbox">
   <img src="einvolk.jpg">
 </div>
 
 <script>
-  /* Theme Toggle */
+  /* THEME TOGGLE */
   const toggle = document.getElementById("theme-toggle");
   const html = document.documentElement;
   const saved = localStorage.getItem("theme");
@@ -177,19 +197,18 @@
     toggle.textContent = saved === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   }
 
-  toggle.addEventListener("click", () => {
-    const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    html.setAttribute("data-theme", mode);
-    localStorage.setItem("theme", mode);
-    toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
-  });
+  toggle.onclick = () => {
+    const newMode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", newMode);
+    localStorage.setItem("theme", newMode);
+    toggle.textContent = newMode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  };
 
-  /* Lightbox */
-  const img = document.getElementById("poster-image");
+  /* LIGHTBOX */
+  const img = document.getElementById("poster1-img");
   const lightbox = document.getElementById("lightbox");
-
-  img.onclick = () => { lightbox.style.display = "flex"; };
-  lightbox.onclick = () => { lightbox.style.display = "none"; };
+  img.onclick = () => lightbox.style.display = "flex";
+  lightbox.onclick = () => lightbox.style.display = "none";
 </script>
 
 </body>
