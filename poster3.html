@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poster 3 – Sterilisation ist Befreiung, nicht Strafe</title>
 
   <style>
     :root {
-      --bg-color: rgba(255,255,255,0.82);
+      --bg-color: rgba(255,255,255,0.84);
       --text-color: #222;
-      --card-bg: rgba(255,255,255,0.88);
-      --nav-bg: rgba(0,0,0,0.7);
+      --card-bg: rgba(255,255,255,0.90);
+      --nav-bg: rgba(0,0,0,0.65);
       --nav-link-bg: rgba(80,80,80,0.7);
       --nav-link-hover: rgba(120,120,120,0.8);
     }
 
     [data-theme="dark"] {
-      --bg-color: rgba(20,20,30,0.75);
+      --bg-color: rgba(20,20,30,0.80);
       --text-color: #f1f1f1;
-      --card-bg: rgba(30,30,40,0.75);
-      --nav-bg: rgba(0,0,0,0.75);
-      --nav-link-bg: rgba(50,50,70,0.7);
-      --nav-link-hover: rgba(80,80,110,0.8);
+      --card-bg: rgba(30,30,40,0.86);
+      --nav-bg: rgba(0,0,0,0.85);
+      --nav-link-bg: rgba(60,60,60,0.8);
+      --nav-link-hover: rgba(90,90,90,0.9);
     }
 
     body {
@@ -31,9 +31,9 @@
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
-      color: var(--text-color);
       font-size: 19px;
       line-height: 1.85;
+      color: var(--text-color);
     }
 
     nav {
@@ -49,21 +49,18 @@
     }
 
     nav a, nav button {
-      color: #fff;
       background: var(--nav-link-bg);
-      padding: 8px 16px;
-      text-decoration: none;
+      color: #fff;
+      padding: 8px 18px;
       border-radius: 999px;
+      text-decoration: none;
       border: none;
-      cursor: pointer;
       font-size: 17px;
+      cursor: pointer;
       transition: background .25s ease, transform .2s ease;
     }
 
-    nav a:hover, nav button:hover {
-      background: var(--nav-link-hover);
-      transform: translateY(-1px);
-    }
+    nav a:hover, nav button:hover { background: var(--nav-link-hover); transform: translateY(-1px); }
 
     .container {
       max-width: 1250px;
@@ -71,32 +68,31 @@
       background: var(--card-bg);
       padding: 50px;
       border-radius: 18px;
-      backdrop-filter: blur(4px);
       box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+      backdrop-filter: blur(4px);
     }
 
     h2 {
       text-align: center;
-      font-size: 1.9rem;
-      border-bottom: 2px solid rgba(0,0,0,0.18);
-      padding-bottom: 12px;
+      font-size: 2rem;
       margin-bottom: 30px;
+      border-bottom: 2px solid #555;
+      padding-bottom: 12px;
     }
 
     .flex {
       display: flex;
-      gap: 30px;
+      gap: 35px;
       align-items: flex-start;
-      margin-bottom: 35px;
     }
 
-    .left { flex: 0 0 48%; }
-    .right { flex: 0 0 52%; }
+    .left { flex: 0 0 50%; }
+    .right { flex: 0 0 50%; }
 
     .poster-img {
       width: 100%;
       border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
       cursor: pointer;
       transition: transform .25s ease;
     }
@@ -112,117 +108,134 @@
       align-items: center;
       z-index: 999;
     }
+
     #lightbox3 img {
       max-width: 90%;
       max-height: 90%;
-      border-radius: 10px;
+      border-radius: 14px;
     }
 
-    h3.section-title {
-      font-size: 1.4rem;
-      margin-top: 35px;
-      border-bottom: 1px solid rgba(0,0,0,0.2);
-      padding-bottom: 8px;
+    h3 {
+      margin-top: 25px;
+      border-bottom: 1px solid #888;
+      padding-bottom: 6px;
+      font-size: 1.3rem;
     }
 
-    ul { padding-left: 30px; }
+    ul { margin-left: 20px; }
   </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
-  <a href="index.html">Home</a>
+  <a href="Home.html">Home</a>
+  <a href="index.html">Introduction</a>
   <a href="poster1.html">Poster 1</a>
   <a href="poster2.html">Poster 2</a>
   <a href="poster3.html">Poster 3</a>
   <a href="conclusion.html">Conclusion</a>
   <a href="sources.html">Sources</a>
-  <button id="theme-toggle-p3">🌙 Dark mode</button>
+  <button id="theme-toggle">🌙 Dark mode</button>
 </nav>
 
 <div class="container">
   <h2>“Sterilisation ist Befreiung, nicht Strafe”</h2>
 
-  <!-- IMAGE + INTRO SIDE-BY-SIDE -->
   <div class="flex">
+
+    <!-- LEFT COLUMN (IMAGE) -->
     <div class="left">
-      <img src="sterilisation.jpg" 
-           alt="Sterilisation ist Befreiung, nicht Strafe poster"
-           class="poster-img"
-           id="poster3-img">
+      <img src="sterilisation.jpg" class="poster-img" id="poster3-img" alt="Sterilisation ist Befreiung, nicht Strafe poster">
+
+      <h3>Visual Strategy</h3>
+      <p>
+        Unlike more aggressive propaganda, this poster uses soft imagery—calm expressions, clean medical settings,
+        and gentle typography—to disguise the violence of forced sterilization. By presenting sterilization as
+        “liberation,” the regime framed loss of bodily autonomy as a compassionate, even helpful, medical service.
+      </p>
+
+      <ul>
+        <li>Calm visual design downplays state coercion</li>
+        <li>Medical imagery presents eugenics as science</li>
+        <li>Reassuring language masks human rights violations</li>
+        <li>Suggests that sterilization prevents future suffering</li>
+      </ul>
     </div>
 
+    <!-- RIGHT COLUMN (TEXT) -->
     <div class="right">
+
       <h3>Background and Purpose</h3>
       <p>
-        This poster, meaning <strong>“Sterilization is liberation, not punishment,”</strong> was created
-        in the mid-1930s to support Nazi Germany’s hereditary health policies. It aimed to make compulsory
-        sterilization appear humane, responsible, and even beneficial to those targeted.
+        This poster was part of the Nazi regime’s campaign to promote the 1933
+        <strong>Law for the Prevention of Hereditarily Diseased Offspring</strong>. The law mandated compulsory
+        sterilization for people labeled “genetically unfit,” including those with disabilities, mental illness,
+        epilepsy, alcoholism, or poverty. The poster reframed sterilization as humane, rather than punitive.
       </p>
 
       <h3>Where It Was Displayed</h3>
       <ul>
-        <li>Public health clinics and hospitals</li>
-        <li>Genetic counseling offices</li>
-        <li>School biology classrooms</li>
-        <li>Government-run hereditary health exhibitions</li>
+        <li>Hospitals, public health clinics, and medical offices</li>
+        <li>Genetic counseling centers</li>
+        <li>Educational exhibitions on racial hygiene</li>
+        <li>Materials used in government-sponsored lectures</li>
       </ul>
+
+      <h3>Emotional and Psychological Messaging</h3>
+      <p>
+        By promising “freedom,” the poster suggested that sterilization relieved individuals of the burden of
+        producing “sick” children. This intentionally inverted reality: sterilization removed freedom, autonomy,
+        and reproductive rights.
+      </p>
+
+      <ul>
+        <li>Frames medical coercion as kindness</li>
+        <li>Targets fear of hereditary illness</li>
+        <li>Uses emotional manipulation instead of overt threats</li>
+        <li>Reinforces idea that individual rights must serve the “nation’s health”</li>
+      </ul>
+
+      <h3>Historical Importance</h3>
+      <p>
+        Propaganda like this softened public resistance to sterilization policies. Once Germans accepted the idea
+        that some lives were “burdens,” the regime escalated to the murder of disabled children and adults through
+        the “T4 euthanasia program.” This poster reveals how harmful policies often begin with gentle language
+        and “scientific” justification.
+      </p>
+
     </div>
   </div>
-
-  <!-- FULL-WIDTH CONTENT -->
-  <h3 class="section-title">Meaning and Visual Strategy</h3>
-  <p>
-    The poster’s slogan suggests that sterilization frees individuals from illness and social burden.
-    This framing disguises the coercive and discriminatory nature of the policy. Calm figures and clean,
-    modern medical imagery helped create a sense of safety and reassurance.
-  </p>
-
-  <p>
-    By borrowing the style of clinical diagrams and modern public health advertising, Nazi propaganda
-    made sterilization appear objective and scientific. This visual approach masked the reality that
-    decisions about who was sterilized were rooted in prejudice against disabled people and marginalized
-    groups.
-  </p>
-
-  <h3 class="section-title">Historical Importance</h3>
-  <p>
-    Posters like this were crucial in persuading the public to accept forced sterilization as a normal
-    part of national health policy. Once such intervention seemed acceptable, it became easier for the
-    regime to expand toward the euthanasia program and other forms of systematic murder. This poster
-    demonstrates how harmful policies often begin not with violence, but with persuasive and carefully
-    crafted messaging.
-  </p>
 </div>
 
 <!-- LIGHTBOX -->
 <div id="lightbox3">
-  <img src="sterilisation.jpg" alt="Expanded view of sterilisation poster">
+  <img src="sterilisation.jpg">
 </div>
 
+<!-- DARK MODE + LIGHTBOX -->
 <script>
-  const toggle3 = document.getElementById("theme-toggle-p3");
-  const root3 = document.documentElement;
-  const saved3 = localStorage.getItem("theme");
+  const toggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+  const saved = localStorage.getItem("theme");
 
-  if (saved3) {
-    root3.setAttribute("data-theme", saved3);
-    toggle3.textContent = saved3 === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  if (saved) {
+    html.setAttribute("data-theme", saved);
+    toggle.textContent = saved === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   }
 
-  toggle3.addEventListener("click", () => {
-    const newMode = root3.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root3.setAttribute("data-theme", newMode);
-    localStorage.setItem("theme", newMode);
-    toggle3.textContent = newMode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  toggle.addEventListener("click", () => {
+    const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+    toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   });
 
   const img3 = document.getElementById("poster3-img");
   const lightbox3 = document.getElementById("lightbox3");
-
-  img3.onclick = () => { lightbox3.style.display = "flex"; };
-  lightbox3.onclick = () => { lightbox3.style.display = "none"; };
+  img3.onclick = () => lightbox3.style.display = "flex";
+  lightbox3.onclick = () => lightbox3.style.display = "none";
 </script>
 
 </body>
