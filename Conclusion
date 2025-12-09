@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conclusion</title>
+
+  <style>
+    /* ====== THEME COLORS ====== */
+    :root {
+      --bg-color: rgba(255,255,255,0.82);
+      --text-color: #222;
+      --card-bg: rgba(255,255,255,0.88);
+      --nav-bg: rgba(0,0,0,0.65);
+      --nav-link-bg: rgba(80,80,80,0.7);
+      --nav-link-hover: rgba(120,120,120,0.8);
+    }
+
+    [data-theme="dark"] {
+      --bg-color: rgba(20,20,30,0.75);
+      --text-color: #e8e8e8;
+      --card-bg: rgba(30,30,40,0.75);
+      --nav-bg: rgba(0,0,0,0.75);
+      --nav-link-bg: rgba(50,50,70,0.7);
+      --nav-link-hover: rgba(80,80,110,0.8);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-image: url("German.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: var(--text-color);
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    /* ====== NAV ====== */
+    nav {
+      background: var(--nav-bg);
+      padding: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+
+    nav a, nav button {
+      background: var(--nav-link-bg);
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 17px;
+      cursor: pointer;
+      transition: background .25s ease, transform .2s ease;
+    }
+
+    nav a:hover, nav button:hover {
+      background: var(--nav-link-hover);
+      transform: translateY(-1px);
+    }
+
+    /* ====== CONTAINER ====== */
+    .container {
+      max-width: 1250px;
+      margin: 50px auto;
+      background: var(--card-bg);
+      padding: 50px;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+      backdrop-filter: blur(4px);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      border-bottom: 2px solid rgba(0,0,0,0.2);
+      padding-bottom: 10px;
+      margin-bottom: 32px;
+    }
+
+    h3 {
+      margin-top: 40px;
+      border-bottom: 2px solid rgba(0,0,0,0.15);
+      padding-bottom: 8px;
+    }
+
+    .audio-box {
+      margin-top: 25px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(0,0,0,0.2);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="poster1.html">Poster 1</a>
+  <a href="poster2.html">Poster 2</a>
+  <a href="poster3.html">Poster 3</a>
+  <a href="conclusion.html">Conclusion</a>
+  <a href="sources.html">Sources</a>
+  <button id="theme-toggle">🌙 Dark mode</button>
+</nav>
+
+<div class="container">
+
+  <h2>Conclusion</h2>
+
+  <p>
+    Examining these Nazi propaganda posters reveals how visual messaging played a central role in shaping
+    public perception, legitimizing discrimination, and preparing the population to accept radical policies.
+    The posters analyzed—<em>“Ein Volk, ein Reich, ein Führer!”</em>, <em>“Das furchtbare Erbe einer Trunkenen”</em>, and
+    <em>“Sterilisation ist Befreiung, nicht Strafe”</em>—each targeted different emotions and audiences, but
+    together they formed a coherent ideological campaign.
+  </p>
+
+  <p>
+    Political propaganda framed absolute loyalty to Hitler as both natural and patriotic. Eugenics posters
+    portrayed disability, illness, and addiction as hereditary threats to the nation, transforming prejudice
+    into something that appeared scientific. Posters promoting sterilization softened coercive policies by
+    presenting them as compassionate or protective. These visual messages did not exist in isolation—they
+    were reinforced by speeches, newspapers, films, and educational materials that surrounded citizens in a
+    single, unified worldview.
+  </p>
+
+  <p>
+    When analyzed together, the posters demonstrate the extraordinary power of controlled imagery in a
+    dictatorship. Propaganda does not simply tell people what to think; it reshapes what they believe is
+    normal, acceptable, or inevitable. By the time the Nazi regime expanded toward mass violence, many
+    Germans had already internalized the idea that excluding certain groups—or even eliminating them—was
+    an unfortunate but necessary part of protecting the “national community.”
+  </p>
+
+  <p>
+    Understanding how propaganda works is essential today. The techniques used by the Nazi state—emotional
+    manipulation, repetition, pseudoscientific language, and the blending of fear with nationalism—remain
+    visible in modern information environments. By studying these historical examples, we sharpen our
+    ability to recognize harmful narratives and resist attempts to normalize prejudice in contemporary
+    societies.
+  </p>
+
+  <h3>Audio Narration</h3>
+
+  <div class="audio-box">
+    <p><strong>Listen to the conclusion narration:</strong></p>
+    <audio controls>
+      <source src="conclusion.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+  </div>
+
+</div>
+
+<script>
+  const toggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+  const saved = localStorage.getItem("theme");
+
+  if (saved) {
+    html.setAttribute("data-theme", saved);
+    toggle.textContent = saved === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  }
+
+  toggle.addEventListener("click", () => {
+    const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+    toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  });
+</script>
+
+</body>
+</html>
 
