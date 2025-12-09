@@ -10,8 +10,7 @@
     :root {
       --bg-color: rgba(255,255,255,0.82);
       --text-color: #222;
-      --card-bg: rgba(255,255,255,0.9);
-      --accent: #7a0f0f;
+      --card-bg: rgba(255,255,255,0.88);
       --nav-bg: rgba(0,0,0,0.65);
       --nav-link-bg: rgba(80,80,80,0.7);
       --nav-link-hover: rgba(120,120,120,0.8);
@@ -20,27 +19,24 @@
     [data-theme="dark"] {
       --bg-color: rgba(20,20,30,0.75);
       --text-color: #e8e8e8;
-      --card-bg: rgba(30,30,40,0.8);
-      --accent: #c94141;
+      --card-bg: rgba(30,30,40,0.75);
       --nav-bg: rgba(0,0,0,0.75);
       --nav-link-bg: rgba(50,50,70,0.7);
       --nav-link-hover: rgba(80,80,110,0.8);
     }
 
-    /* ====== BACKGROUND IMAGE ====== */
     body {
-      margin: 0;
       font-family: "Times New Roman", serif;
       background-image: url("German.jpg");
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
       color: var(--text-color);
+      margin: 0;
       font-size: 19px;
-      line-height: 1.75;
+      line-height: 1.85;
     }
 
-    /* ====== NAVIGATION ====== */
     nav {
       background: var(--nav-bg);
       padding: 14px;
@@ -54,15 +50,14 @@
     }
 
     nav a, nav button {
-      color: #fff;
       background: var(--nav-link-bg);
+      color: #fff;
       padding: 8px 16px;
       text-decoration: none;
       border-radius: 999px;
-      border: none;
-      cursor: pointer;
       font-size: 17px;
-      transition: background .2s ease, transform .2s ease;
+      cursor: pointer;
+      transition: background .25s ease, transform .2s ease;
     }
 
     nav a:hover, nav button:hover {
@@ -70,39 +65,27 @@
       transform: translateY(-1px);
     }
 
-    /* ====== MAIN CONTENT CARD ====== */
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 1250px;
+      margin: 50px auto;
       background: var(--card-bg);
-      padding: 40px;
+      padding: 50px;
       border-radius: 18px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.25);
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(4px);
+    }
+
+    h2, h3 {
+      border-bottom: 2px solid rgba(0,0,0,0.2);
+      padding-bottom: 6px;
     }
 
     h2 {
       text-align: center;
-      font-size: 1.9rem;
-      margin-bottom: 24px;
-      border-bottom: 2px solid rgba(0,0,0,0.15);
-      padding-bottom: 10px;
+      margin-bottom: 35px;
     }
-
-    h3 {
-      font-size: 1.4rem;
-      margin-top: 30px;
-      border-bottom: 2px solid rgba(0,0,0,0.15);
-      padding-bottom: 6px;
-    }
-
-    p {
-      margin-bottom: 14px;
-    }
-
   </style>
 </head>
-
 
 <body>
 
@@ -111,62 +94,73 @@
   <a href="poster1.html">Poster 1</a>
   <a href="poster2.html">Poster 2</a>
   <a href="poster3.html">Poster 3</a>
+  <a href="conclusion.html">Conclusion</a>
   <a href="sources.html">Sources</a>
   <button id="theme-toggle">🌙 Dark mode</button>
 </nav>
 
 <div class="container">
+
   <h2>Sources & Bibliography</h2>
 
   <h3>Primary Sources</h3>
 
-  <p>
-    <strong>United States Holocaust Memorial Museum.</strong>  
-    “Reichstag Speech.” <em>Holocaust Encyclopedia.</em>  
-    Accessed October 11, 2025.
-  </p>
+  <p><strong>Hitler, Adolf.</strong> “Reichstag Speech, January 30, 1939.” United States Holocaust Memorial Museum.  
+  Accessed October 11, 2025.  
+  https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1939-1941/hitler-speech-to-german-parliament</p>
 
-  <p>
-    <strong>United States Holocaust Memorial Museum.</strong>  
-    “Medical and Racial Propaganda.” <em>State of Deception: The Power of Nazi Propaganda.</em>  
-    Accessed October 11, 2025.
-  </p>
+  <p><strong>“Das furchtbare Erbe einer Trunkenen” (1936).</strong> Nazi eugenics propaganda poster.  
+  United States Holocaust Memorial Museum, <em>State of Deception</em> exhibition.</p>
 
-  <p>
-    <strong>United States Holocaust Memorial Museum.</strong>  
-    “Front Page of the Most Popular Issue Ever of <em>Der Stürmer</em>.” <em>Holocaust Encyclopedia.</em>  
-    Accessed October 11, 2025.
-  </p>
+  <p><strong>“Sterilisation ist Befreiung, nicht Strafe” (mid-1930s).</strong> Public health propaganda poster promoting compulsory sterilization.  
+  United States Holocaust Memorial Museum.</p>
 
-  <h3>Secondary Source</h3>
+  <p><strong>“Ein Volk, ein Reich, ein Führer!” (1938–1939).</strong> Political rally poster promoting German unity under Hitler.  
+  Stored in various archives and reproduced in USHMM collections.</p>
 
-  <p>
-    <strong>PBS.</strong>  
-    “Joseph Goebbels (1897–1945).” <em>American Experience.</em>  
-    Accessed October 11, 2025.
-  </p>
+  <p><strong>Front Page of <em>Der Stürmer</em> (1939).</strong> United States Holocaust Memorial Museum, Holocaust Encyclopedia.  
+  https://encyclopedia.ushmm.org</p>
+
+  <p><strong>Nuremberg Laws Documentation (1935).</strong> Reich Citizenship Law and Law for the Protection of German Blood and Honor.  
+  Translated in USHMM legal archives.</p>
+
+  <p><strong>Law for the Prevention of Hereditarily Diseased Offspring (1933).</strong> German Federal Archives translation.</p>
+
+  <br>
+
+  <h3>Secondary Sources</h3>
+
+  <p><strong>PBS.</strong> “Joseph Goebbels (1897–1945).” <em>American Experience</em>. Accessed October 11, 2025.  
+  https://www.pbs.org/wgbh/americanexperience/features/goebbels-biography/</p>
+
+  <p><strong>United States Holocaust Memorial Museum.</strong> “Medical and Racial Propaganda.”  
+  <em>State of Deception: The Power of Nazi Propaganda.</em></p>
+
+  <p><strong>Evans, Richard J.</strong> <em>The Third Reich in Power.</em> New York: Penguin, 2005.</p>
+
+  <p><strong>Koonz, Claudia.</strong> <em>The Nazi Conscience.</em> Harvard University Press, 2003.</p>
+
+  <p><strong>Herf, Jeffrey.</strong> <em>The Jewish Enemy: Nazi Propaganda During World War II and the Holocaust.</em> Harvard University Press, 2006.</p>
+
+  <p><strong>Bergen, Doris L.</strong> <em>War and Genocide: A Concise History of the Holocaust.</em> Rowman & Littlefield, 2016.</p>
 
 </div>
 
 <script>
-  /* THEME SWITCH */
   const toggle = document.getElementById("theme-toggle");
   const html = document.documentElement;
-  const savedTheme = localStorage.getItem("theme");
+  const saved = localStorage.getItem("theme");
 
-  if (savedTheme) {
-    html.setAttribute("data-theme", savedTheme);
-    toggle.textContent =
-      savedTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  if (saved) {
+    html.setAttribute("data-theme", saved);
+    toggle.textContent = saved === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   }
 
   toggle.addEventListener("click", () => {
-    const newTheme =
-      html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    html.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    toggle.textContent =
-      newTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+    const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+    toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   });
 </script>
 
