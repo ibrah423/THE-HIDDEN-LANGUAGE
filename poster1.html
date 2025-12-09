@@ -6,12 +6,10 @@
   <title>Poster 1 – Ein Volk, ein Reich, ein Führer!</title>
 
   <style>
-    /* ====== THEME COLORS ====== */
     :root {
       --bg-color: rgba(255,255,255,0.82);
       --text-color: #222;
-      --card-bg: rgba(255,255,255,0.88);
-      --accent: #7a0f0f;
+      --card-bg: rgba(255,255,255,0.90);
       --nav-bg: rgba(0,0,0,0.65);
       --nav-link-bg: rgba(80,80,80,0.7);
       --nav-link-hover: rgba(120,120,120,0.8);
@@ -20,14 +18,12 @@
     [data-theme="dark"] {
       --bg-color: rgba(20,20,30,0.75);
       --text-color: #e8e8e8;
-      --card-bg: rgba(30,30,40,0.75);
-      --accent: #c94141;
+      --card-bg: rgba(30,30,40,0.82);
       --nav-bg: rgba(0,0,0,0.75);
-      --nav-link-bg: rgba(50,50,70,0.7);
-      --nav-link-hover: rgba(80,80,110,0.8);
+      --nav-link-bg: rgba(60,60,80,0.7);
+      --nav-link-hover: rgba(90,90,120,0.8);
     }
 
-    /* ====== BACKGROUND ====== */
     body {
       margin: 0;
       font-family: "Times New Roman", serif;
@@ -37,10 +33,9 @@
       background-position: center;
       color: var(--text-color);
       font-size: 19px;
-      line-height: 1.75;
+      line-height: 1.85;
     }
 
-    /* ====== NAVIGATION ====== */
     nav {
       background: var(--nav-bg);
       padding: 14px;
@@ -53,29 +48,30 @@
       backdrop-filter: blur(4px);
     }
 
-    nav a, nav button {
-      color: #fff;
+    nav a,
+    nav button {
       background: var(--nav-link-bg);
+      color: #fff;
       padding: 8px 16px;
       text-decoration: none;
       border-radius: 999px;
       border: none;
-      cursor: pointer;
       font-size: 17px;
-      transition: background .2s ease, transform .2s ease;
+      cursor: pointer;
+      transition: background .25s ease, transform .2s ease;
     }
 
-    nav a:hover, nav button:hover {
+    nav a:hover,
+    nav button:hover {
       background: var(--nav-link-hover);
       transform: translateY(-1px);
     }
 
-    /* ====== MAIN CARD ====== */
     .container {
-      max-width: 1100px;
-      margin: 40px auto;
+      max-width: 1250px;
+      margin: 50px auto;
       background: var(--card-bg);
-      padding: 40px;
+      padding: 50px;
       border-radius: 18px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.25);
       backdrop-filter: blur(4px);
@@ -83,43 +79,31 @@
 
     h2 {
       text-align: center;
-      font-size: 1.9rem;
-      margin-bottom: 24px;
-      border-bottom: 2px solid rgba(0,0,0,0.15);
+      font-size: 2rem;
+      border-bottom: 2px solid rgba(0,0,0,0.2);
       padding-bottom: 10px;
+      margin-bottom: 35px;
     }
 
-    .layout {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 28px;
-    }
-
-    @media(max-width: 900px) {
-      .layout { grid-template-columns: 1fr; }
+    h3 {
+      margin-top: 40px;
+      border-bottom: 2px solid rgba(0,0,0,0.15);
+      padding-bottom: 8px;
     }
 
     .poster-img {
       width: 100%;
       border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+      margin: 25px 0 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
       cursor: pointer;
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s ease;
     }
 
     .poster-img:hover {
       transform: scale(1.03);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
     }
 
-    .section-title {
-      margin-top: 32px;
-      font-size: 1.35rem;
-      border-bottom: 2px solid rgba(0,0,0,0.15);
-      padding-bottom: 6px;
-    }
-
-    /* ====== LIGHTBOX ====== */
     #lightbox {
       position: fixed;
       inset: 0;
@@ -129,13 +113,11 @@
       align-items: center;
       z-index: 999;
     }
-
     #lightbox img {
       max-width: 90%;
       max-height: 90%;
       border-radius: 12px;
     }
-
   </style>
 </head>
 
@@ -147,99 +129,66 @@
   <a href="poster1.html">Poster 1</a>
   <a href="poster2.html">Poster 2</a>
   <a href="poster3.html">Poster 3</a>
+  <a href="conclusion.html">Conclusion</a>
   <a href="sources.html">Sources</a>
   <button id="theme-toggle">🌙 Dark mode</button>
 </nav>
 
 <div class="container">
+
   <h2>“Ein Volk, ein Reich, ein Führer!”</h2>
 
-  <div class="layout">
-    
-    <!-- IMAGE LEFT -->
-    <img 
-      src="einvolk.jpg"
-      alt="Ein Volk, ein Reich, ein Führer propaganda poster"
-      class="poster-img"
-      id="poster1-img"
-    />
+  <ul>
+    <li><strong>Date Created:</strong> 1938–1939</li>
+    <li><strong>Produced By:</strong> Reich Ministry of Public Enlightenment and Propaganda</li>
+    <li><strong>Purpose:</strong> Promote political unity under Adolf Hitler</li>
+    <li><strong>Medium:</strong> Mass-printed posters, banners, and rally materials</li>
+  </ul>
 
-    <!-- TEXT RIGHT -->
-    <div>
-      <p>
-        This political propaganda poster, whose slogan translates to 
-        <strong>“One People, One Empire, One Leader,”</strong> became widely visible during 1938–1939
-        as Nazi Germany expanded into Austria and other territories. The design was produced under the 
-        direction of the <strong>Reich Ministry of Public Enlightenment and Propaganda</strong>.
-      </p>
+  <img src="einvolk.jpg" class="poster-img" id="poster-image"
+       alt="Ein Volk, ein Reich, ein Führer propaganda poster">
 
-      <h3 class="section-title">Purpose and Message</h3>
-      <ul>
-        <li>Promoted loyalty to Hitler as the embodiment of the German people.</li>
-        <li>Framed political unity as racial unity—“one people” meant exclusion of minorities.</li>
-        <li>Used repetition to reinforce emotional attachment to the regime.</li>
-      </ul>
+  <h3>Visual Message</h3>
+  <p>
+    The slogan suggested that the people, the state, and the dictator were one inseparable entity. This
+    eliminated the idea of political diversity and framed total obedience as patriotic duty.
+  </p>
 
-      <h3 class="section-title">Creation and Distribution</h3>
-      <p>
-        The slogan appeared everywhere—on posters, signs, banners, and parade decorations.
-        State printers mass-produced it and placed copies in:
-      </p>
-      <ul>
-        <li>Government buildings</li>
-        <li>Schools and youth camps</li>
-        <li>Train stations and city squares</li>
-        <li>Large public rally routes</li>
-      </ul>
-
-      <h3 class="section-title">Historical Significance</h3>
-      <p>
-        This poster reframed dictatorship as unity. By merging Hitler, the people, and the nation into 
-        a single identity, dissent appeared un-German. This emotional groundwork made later policies—
-        including persecution and war—seem like collective duty rather than political violence.
-      </p>
-    </div>
-  </div>
+  <h3>Historical Importance</h3>
+  <p>
+    Posters like this normalized authoritarian leadership by presenting dictatorship as unity. This ideological
+    groundwork made later racial laws and persecution appear justified.
+  </p>
 </div>
 
-<!-- LIGHTBOX -->
 <div id="lightbox">
-  <img src="einvolk.jpg" alt="">
+  <img src="einvolk.jpg" alt="Expanded poster view">
 </div>
-
 
 <script>
-  /* THEME SWITCH */
+  /* Theme Toggle */
   const toggle = document.getElementById("theme-toggle");
   const html = document.documentElement;
-  const savedTheme = localStorage.getItem("theme");
+  const saved = localStorage.getItem("theme");
 
-  if (savedTheme) {
-    html.setAttribute("data-theme", savedTheme);
-    toggle.textContent =
-      savedTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  if (saved) {
+    html.setAttribute("data-theme", saved);
+    toggle.textContent = saved === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   }
 
   toggle.addEventListener("click", () => {
-    const theme =
-      html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    html.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-    toggle.textContent =
-      theme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+    const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+    toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   });
 
-  /* LIGHTBOX */
-  const img = document.getElementById("poster1-img");
+  /* Lightbox */
+  const img = document.getElementById("poster-image");
   const lightbox = document.getElementById("lightbox");
 
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-  });
-
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
+  img.addEventListener("click", () => lightbox.style.display = "flex");
+  lightbox.addEventListener("click", () => lightbox.style.display = "none");
 </script>
 
 </body>
