@@ -35,6 +35,7 @@
       flex-direction: column;
     }
 
+    /* Navigation */
     nav {
       background: var(--nav-bg);
       padding: 12px;
@@ -59,7 +60,17 @@
       transition: background .25s ease, transform .2s ease;
     }
 
-    nav a:hover, nav button:hover { background: var(--nav-link-hover); transform: translateY(-1px); }
+    nav a:hover, nav button:hover {
+      background: var(--nav-link-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Active page highlighting */
+    nav a.active {
+      background: rgba(255, 255, 255, 0.25);
+      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
 
     .center-box {
       margin: auto;
@@ -86,15 +97,15 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION BAR -->
 <nav>
-  <a href="home.html">Home</a>
-  <a href="index.html">Introduction</a>
-  <a href="poster1.html">Poster 1</a>
-  <a href="poster2.html">Poster 2</a>
-  <a href="poster3.html">Poster 3</a>
-  <a href="conclusion.html">Conclusion</a>
-  <a href="sources.html">Sources</a>
+  <a href="home.html" class="nav-link">Home</a>
+  <a href="index.html" class="nav-link">Introduction</a>
+  <a href="poster1.html" class="nav-link">Poster 1</a>
+  <a href="poster2.html" class="nav-link">Poster 2</a>
+  <a href="poster3.html" class="nav-link">Poster 3</a>
+  <a href="conclusion.html" class="nav-link">Conclusion</a>
+  <a href="sources.html" class="nav-link">Sources</a>
   <button id="theme-toggle">🌙 Dark mode</button>
 </nav>
 
@@ -102,6 +113,16 @@
   <h1>The Hidden Language of Nazi Propaganda</h1>
   <h2>A Visual & Historical Analysis</h2>
 </div>
+
+<!-- ACTIVE NAV LINK SCRIPT -->
+<script>
+  const current = window.location.pathname.split("/").pop().toLowerCase();
+  document.querySelectorAll("nav a.nav-link").forEach(link => {
+    if (link.getAttribute("href").toLowerCase() === current) {
+      link.classList.add("active");
+    }
+  });
+</script>
 
 <!-- DARK MODE SCRIPT -->
 <script>
