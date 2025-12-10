@@ -60,7 +60,10 @@
       transition: background .25s ease, transform .2s ease;
     }
 
-    nav a:hover, nav button:hover { background: var(--nav-link-hover); transform: translateY(-1px); }
+    nav a:hover, nav button:hover {
+      background: var(--nav-link-hover);
+      transform: translateY(-1px);
+    }
 
     .container {
       max-width: 1250px;
@@ -86,13 +89,8 @@
       align-items: flex-start;
     }
 
-    .left {
-      flex: 0 0 45%;
-    }
-
-    .right {
-      flex: 0 0 55%;
-    }
+    .left { flex: 0 0 45%; }
+    .right { flex: 0 0 55%; }
 
     .poster-img {
       width: 100%;
@@ -127,9 +125,7 @@
       font-size: 1.3rem;
     }
 
-    ul {
-      margin-left: 20px;
-    }
+    ul { margin-left: 20px; }
   </style>
 </head>
 
@@ -151,6 +147,7 @@
   <h2>“Ein Volk, ein Reich, ein Führer!”</h2>
 
   <div class="flex">
+
     <!-- IMAGE LEFT -->
     <div class="left">
       <img src="einvolk.jpg" class="poster-img" id="poster1-img" alt="Ein Volk, ein Reich, ein Führer poster">
@@ -158,40 +155,60 @@
 
     <!-- TEXT RIGHT -->
     <div class="right">
+
       <h3>Background and Purpose</h3>
       <p>
-        Produced in the late 1930s, this poster promoted the slogan <strong>“One People, One Empire, One Leader”</strong>.
-        It became especially widespread during the 1938 Anschluss with Austria and the subsequent expansion of Nazi territory.
-        The message was simple but powerful Hitler’s authority was presented as the unifying force of all ethnic Germans.
+        Produced during the late 1930s, this poster circulated widely during the Anschluss and the subsequent
+        territorial expansion of Nazi Germany. The slogan <strong>“One People, One Empire, One Leader”</strong>
+        condensed the regime’s political theology into a single rhythmic message. As historian Richard Evans
+        notes, such slogans were designed to transform political loyalty into a form of emotional commitment,
+        making obedience to Hitler appear synonymous with national unity (<em>The Third Reich in Power</em>).
       </p>
 
-      <h3>Distribution Across Germany</h3>
+      <h3>Distribution Across the Reich</h3>
       <ul>
-        <li>Hung along streets during rallies and marches</li>
-        <li>Placed in schools, government offices, and city squares</li>
-        <li>Printed in newspapers and political brochures</li>
-        <li>Used in coordinated propaganda events overseen by Goebbels’ ministry</li>
+        <li>Displayed during mass rallies, marches, and plebiscites</li>
+        <li>Placed in schools, post offices, government buildings, and factories</li>
+        <li>Printed in newspapers and election pamphlets</li>
+        <li>Distributed through Goebbels’ highly centralized propaganda apparatus</li>
       </ul>
+
+      <p>
+        According to the United States Holocaust Memorial Museum, such posters were deliberately positioned in
+        everyday environments to ensure constant exposure. This saturation strategy helped build what David Welch
+        describes as a visual sense of <em>Volksgemeinschaft</em>—a “national community” that appeared united
+        behind a single leader.
+      </p>
 
       <h3>Meaning and Visual Strategy</h3>
       <p>
-        The slogan reduces national identity to absolute unity: one people, one state, one ruler.
-        This intentionally removed space for dissent or alternative viewpoints. Posters like this helped redefine obedience
-        as patriotism and presented loyalty to Hitler as a requirement of being truly German.
+        The poster’s message reduces identity to a closed formula: one people, one state, one ruler. The simplicity
+        is intentional. Jeffrey Herf emphasizes that Nazi propaganda relied on reducing complex political questions
+        into emotionally charged binaries—unity versus chaos, loyalty versus betrayal (<em>The Jewish Enemy</em>).
+        The red and black palette reinforces urgency and strength, while the image of Hitler symbolizes the
+        embodiment of national destiny.
       </p>
 
       <ul>
-        <li>Short, repetitive messaging = easy to memorize</li>
-        <li>Red and black color scheme reinforced urgency and power</li>
-        <li>Imagery encouraged emotional identification with the “national community”</li>
-        <li>Aligned with Hitler’s 1939 Reichstag speech which framed unity as destiny</li>
+        <li>Short, repetitive phrase—easy to memorize and recall</li>
+        <li>Color choices associated with power, sacrifice, and movement</li>
+        <li>Imagery fostering emotional identification with the “German community”</li>
+        <li>Mirrors themes from Hitler’s 1939 Reichstag speech promoting “historic unity” as fate</li>
       </ul>
 
       <h3>Historical Importance</h3>
       <p>
-        This poster demonstrates how dictatorship can be disguised as unity. Its message laid groundwork for social exclusion,
-        political violence, and eventually genocide because once “the people” were defined, everyone outside that category
-        became an enemy of the state.
+        As Claudia Koonz argues, the Nazis redefined morality by framing loyalty to the leader as civic virtue,
+        making dissent appear immoral (<em>The Nazi Conscience</em>). This poster is an early example of that
+        moral reorientation. Once “the people” were defined racially and politically, anyone who did not fit that
+        definition could be portrayed as a threat to unity. Posters like this helped justify the exclusion,
+        surveillance, and eventual persecution of those labeled outsiders.
+      </p>
+
+      <p>
+        In this way, the poster did more than promote unity—it prepared citizens to accept a dictatorship disguised
+        as collective destiny. It demonstrates how visual propaganda can translate ideological goals into an
+        emotionally compelling narrative that normalizes authoritarian power.
       </p>
     </div>
   </div>
@@ -199,7 +216,7 @@
 
 <!-- LIGHTBOX -->
 <div id="lightbox">
-  <img src="einvolk.jpg">
+  <img src="einvolk.jpg" alt="Ein Volk, ein Reich, ein Führer poster enlarged">
 </div>
 
 <!-- DARK MODE + LIGHTBOX SCRIPT -->
@@ -222,6 +239,7 @@
 
   const img = document.getElementById("poster1-img");
   const lightbox = document.getElementById("lightbox");
+
   img.onclick = () => lightbox.style.display = "flex";
   lightbox.onclick = () => lightbox.style.display = "none";
 </script>
