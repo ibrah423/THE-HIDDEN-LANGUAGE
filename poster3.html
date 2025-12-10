@@ -9,19 +9,20 @@
     :root {
       --bg-color: rgba(255,255,255,0.84);
       --text-color: #222;
-      --card-bg: rgba(255,255,255,0.90);
+      --card-bg: rgba(255,255,255,0.95);
       --nav-bg: rgba(0,0,0,0.65);
       --nav-link-bg: rgba(80,80,80,0.7);
       --nav-link-hover: rgba(120,120,120,0.8);
+      --card-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
-
     [data-theme="dark"] {
       --bg-color: rgba(20,20,30,0.80);
       --text-color: #f1f1f1;
-      --card-bg: rgba(30,30,40,0.86);
+      --card-bg: rgba(30,30,40,0.90);
       --nav-bg: rgba(0,0,0,0.85);
       --nav-link-bg: rgba(60,60,60,0.8);
       --nav-link-hover: rgba(90,90,90,0.9);
+      --card-shadow: 0 8px 20px rgba(0,0,0,0.45);
     }
 
     body {
@@ -31,9 +32,10 @@
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
+      color: var(--text-color);
       font-size: 19px;
       line-height: 1.85;
-      color: var(--text-color);
+      background-color: var(--bg-color);
     }
 
     nav {
@@ -66,4 +68,177 @@
     }
 
     .container {
-      max-width: 1250px;
+      max-width: 1000px;
+      margin: 60px auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+      backdrop-filter: blur(4px);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .poster-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .poster-img {
+      max-width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      cursor: pointer;
+      transition: transform .25s ease;
+    }
+
+    .poster-img:hover {
+      transform: scale(1.02);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+      border-bottom: 1px solid #777;
+      padding-bottom: 6px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="index.html">Introduction</a>
+    <a href="poster1.html">Poster 1</a>
+    <a href="poster2.html">Poster 2</a>
+    <a href="poster3.html">Poster 3</a>
+    <a href="conclusion.html">Conclusion</a>
+    <a href="sources.html">Sources</a>
+    <button id="theme-toggle">🌙 Dark mode</button>
+  </nav>
+
+  <div class="container">
+    <h2>“Sterilisation ist Befreiung, nicht Strafe”</h2>
+
+    <div class="poster-section">
+      <img src="sterilisation.jpg" class="poster-img" id="poster3-img" alt="Sterilisation ist Befreiung poster">
+    </div>
+
+    <div class="content-grid">
+
+      <div class="card">
+        <h3>Background & Purpose</h3>
+        <p>
+          This poster accompanied the 1933 Law for the Prevention of Hereditarily Diseased Offspring, under which
+          individuals deemed “genetically unfit” — including those with disabilities, mental illnesses, chronic
+          poverty or “racial defects” — were subject to forced sterilization. The poster reframes sterilization
+          as a humane, socially responsible act rather than coercion.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Where It Was Displayed</h3>
+        <ul>
+          <li>Hospitals and public health clinics</li>
+          <li>Genetic counseling centers</li>
+          <li>Racial hygiene exhibitions</li>
+          <li>Government-sponsored educational lectures</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Visual & Psychological Strategy</h3>
+        <p>
+          By combining calm, clinical imagery with reassuring language, the poster masks the coercive and violent
+          reality of sterilization. The design evokes trust in medical authority and casts forced sterilization
+          as a compassionate act.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Historical Importance</h3>
+        <p>
+          Materials like this helped normalize state control over reproduction. Once citizens accepted sterilization
+          as “helpful,” resistance to more extreme eugenic and racial policies was softened — paving the way
+          for institutionalization and, ultimately, the murderous T4 euthanasia program.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="lightbox">
+    <img src="" alt="Expanded poster image">
+  </div>
+
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+      html.setAttribute("data-theme", saved);
+      toggle.textContent = saved === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+    }
+    toggle.addEventListener("click", () => {
+      const mode = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", mode);
+      localStorage.setItem("theme", mode);
+      toggle.textContent = mode === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+    });
+
+    // Lightbox
+    const poster = document.getElementById("poster3-img");
+    const lightbox = document.getElementById("lightbox");
+    const lbImg = lightbox.querySelector("img");
+
+    poster.onclick = () => {
+      lbImg.src = poster.src;
+      lightbox.style.display = "flex";
+    };
+    lightbox.onclick = () => {
+      lightbox.style.display = "none";
+    };
+  </script>
+
+</body>
+</html>
